@@ -1,0 +1,117 @@
+
+<script src="plugins/grid/jqPaginator.js"></script>
+<script src="plugins/grid/grid.js"></script>
+<style>
+<!--
+	#pagination2{float: right;}
+	#pageSizeOptions{float: left; margin-top: 28px;}
+	#checkData{ float: left;margin-top: 26px;}
+	.table-bordered {border: 1px solid #777;}
+	.table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
+     border: 1px solid #777; }
+-->
+</style>
+
+<div class="content-wrapper">  
+
+	<section class="content-header">
+      <h1>
+        表单
+        <small> 表单分页</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#">表单</a></li>
+        <li><a href="#">表单分页</a></li>
+      </ol>
+    </section>
+    
+	 <!-- Main content -->
+    <section class="content">
+    
+    	<div class="box-body" id = "testBox"></div>
+    
+    </section>
+	
+	
+	<script type="text/javascript">
+	 var policpagins =new kjcs.testPaginCode({
+		 
+		    htmlBox:"testBox",                          
+	        url: false,                            
+	        data: null,                            
+	        page: 1,                                
+	        pageSize: 2,  
+	        rowId : 'id',
+	        parms: {name:1,id:2},
+	        searchParam :[],
+			checkbox:true,
+	        columns: [
+						{
+						    name: "id",
+						    display: "序号",
+						    type: null,
+						    width: 60,
+						    
+						},
+						{
+						    name: "name",
+						    display: "姓名",
+						    type: null,
+						    width: 80,
+						   
+						},
+						{
+						    name: "avg",
+						    display: "年龄",
+						    type: null,
+						    width: 80,
+						   
+						},
+						{
+						    name: "sex",
+						    display: "性别",
+						    width: 60,
+						   
+						},
+						{
+						    name: "hobby",
+						    display: "爱好",
+						    type: null,
+						    width: 150,
+						  
+						},
+						{
+						    name: "operate",
+						    display: "操作",
+						    width: 120,
+						    minWidth: 80,
+						  render :function(rowdata){
+						  var _rowdata = rowdata;
+						  var _button = $("<button class ='add'>添加</button >&nbsp;&nbsp;<button class ='view'>查看</button >&nbsp;&nbsp;<button class ='edit'>修改</button >&nbsp;&nbsp;<button class ='del'>删除</button>")
+						  _button.on('click', function(){
+								switch($(this).attr("class")){
+									case "add":
+									alert("--------add");
+									break;
+									case "view":
+									alert(rowdata.id +"--------view");
+									break;
+									case "edit":
+									alert(rowdata.id +"--------edit");
+									break;
+									case "del":
+									alert(rowdata.id +"--------del");
+									break;
+								}
+						     });
+							return _button;
+							},
+						}
+	                  
+	                  ], 
+		 
+	 }); 
+	
+	</script>
+
+</div>

@@ -1,0 +1,354 @@
+<!--所有的人 按照这个页面来做啊， 包括 列表+表单 -->
+<div class="content-wrapper"  id="unique-name">  <!--  这个class不能修改 -->
+
+	<section class="content-header">
+      <h1>
+        企业
+        <small>注册</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#">企业列表</a></li>
+        <li><a href="#">注册</a></li>
+      </ol>
+    </section>
+    
+	 <!-- Main content -->
+    <section class="content">
+    
+    	<form role="form"  id="editDemoForm">
+    	
+    	<div class="box box-info">
+	    	<!--   .box-header   -->
+	        <div class="box-header with-border">
+	          <h3 class="box-title">示例</h3>
+	          <div class="box-tools pull-right">
+	            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+	            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
+	          </div>
+	        </div>
+	        <!-- /.box-header -->
+	        
+	        <div class="box-body">
+	          <div class="row">
+	            <div class="col-md-12">
+	              <div class="form-group col-md-6">
+	                <label>Multiple</label>
+	                <select class="form-control select2" multiple="multiple" data-placeholder="Select a State" style="width: 100%;">
+	                  <option>Alabama</option>
+	                  <option>Alaska</option>
+	                  <option>California</option>
+	                  <option>Delaware</option>
+	                  <option>Tennessee</option>
+	                  <option>Texas</option>
+	                  <option>Washington</option>
+	                </select>
+	              </div>
+	              <!-- /.form-group -->
+	              <div class="form-group col-md-6">
+	                <label>Disabled Result</label>
+	                <select class="form-control select2" style="width: 100%;">
+	                  <option selected="selected">Alabama</option>
+	                  <option>Alaska</option>
+	                  <option disabled="disabled">California (disabled)</option>
+	                  <option>Delaware</option>
+	                  <option>Tennessee</option>
+	                  <option>Texas</option>
+	                  <option>Washington</option>
+	                </select>
+	              </div>
+	              <!-- /.form-group -->
+	              
+	            </div>
+	            
+	            
+	            
+	          </div>
+	          <!-- /.row -->
+	        </div>
+	        <!-- /.box-body -->
+	        <div class="box-footer">
+	          <button type="submit" class="btn btn-primary">Submit</button>
+	        </div> 
+      </div>
+    	
+    	
+    	<div class="box box-info">
+	        <div class="box-footer">
+	          <button type="submit" class="btn btn-primary">Submit</button>
+	          <button type="button" class="btn btn-primary">Return</button>
+	        </div> 
+      </div>
+    	
+    	<div class="box box-info">
+	    	<!--   .box-header   -->
+	        <div class="box-header with-border">
+	          <h3 class="box-title">用户信息</h3>
+	          <div class="box-tools pull-right">
+	            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+	          </div>
+	        </div>
+	        <!-- /.box-header -->
+	        
+	        <div class="box-body">
+	          <div class="row">
+	            <div class="col-md-12">
+	              <div class="form-group col-md-6">
+	                <label class="requiredMask">证件类型</label>
+	                <select id="idNumType"  name="idNumType"  class="form-control select2"  style="width: 100%;">
+	                  <option selected="selected" value="-1">请选择</option>
+	                  <option value="0">身份证号码</option>
+	                  <option value="1">护照</option>
+	                </select>
+	              </div>
+	            </div>
+	            
+	            <div class="col-md-12">
+	            	<div class="form-group col-md-6">
+			                	<label>管理员手机号:</label>
+				                <div class="input-group">
+				                  <div class="input-group-addon">
+				                    <i class="fa fa-phone"></i>
+				                  </div>
+				                  <input type="text" class="form-control" data-inputmask='"mask": "999-9999-9999"' data-mask>
+				                </div>
+				             </div>
+				      <div class="form-group col-md-6">
+						        <label>邮件</label>
+						        <div class="input-group">
+					               <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+					               <input type="email" class="form-control" placeholder="Email">
+					           	</div>
+				           	</div>       
+	            </div>
+
+	          </div>
+	          <!-- /.row -->
+	        </div>
+      </div>
+      
+      
+    	
+    	<div class="box box-info">
+	    	<!--   .box-header   -->
+	        <div class="box-header with-border">
+	          <h3 class="box-title">企业信息</h3>
+	          <div class="box-tools pull-right">
+	            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+	          </div>
+	        </div>
+	        <!-- /.box-header -->
+	        
+	        <div class="box-body">
+	          <div class="row">
+	            <div class="col-md-12">
+	              <div class="form-group col-md-6">
+	                <label class="requiredMask">证件类型</label>
+	                <select id="idNumType"  name="idNumType"  class="form-control select2"  style="width: 100%;">
+	                  <option selected="selected" value="-1">请选择</option>
+	                  <option value="0">身份证号码</option>
+	                  <option value="1">护照</option>
+	                </select>
+	              </div>
+	              <!-- /.form-group -->
+	              <div class="form-group col-md-6">
+	                <label>行政区域</label>
+	                <select class="form-control select2" disabled="disabled" style="width: 100%;">
+	                  <option selected="selected">园区</option>
+	                  <option>高新区</option>
+	                  <option>常熟</option>
+	                  <option>张家港</option>
+	                  <option>太仓</option>
+	                </select>
+	              </div>
+	              <!-- /.form-group -->
+	            </div>
+	            
+	            <div class="col-md-12">
+	            	<div class="form-group col-md-6">
+			                	<label>管理员手机号:</label>
+				                <div class="input-group">
+				                  <div class="input-group-addon">
+				                    <i class="fa fa-phone"></i>
+				                  </div>
+				                  <input type="text" class="form-control" data-inputmask='"mask": "999-9999-9999"' data-mask>
+				                </div>
+				             </div>
+				      <div class="form-group col-md-6">
+						        <label>邮件</label>
+						        <div class="input-group">
+					               <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+					               <input type="email" class="form-control" placeholder="Email">
+					           	</div>
+				           	</div>       
+	            </div>
+	            
+	            <div class="col-md-12">
+	            	<div class="form-group col-md-6">
+				                  <label>单位网址</label>
+				                  <input type="text" class="form-control" placeholder="http://www.baidu.com">
+				                </div>
+	            
+	            	<div class="form-group col-md-6">
+				                  <label>注册资本(万元)</label>
+				                  <div class="input-group">
+					                <span class="input-group-addon"><i class="fa fa-dollar"></i></span>
+					                <input type="text" class="form-control">
+					                <span class="input-group-addon"><i class="fa fa-ambulance"></i></span>
+					              </div>
+				                </div>
+	            </div>
+	            
+	            <div class="col-md-12">
+	            	<div class="form-group col-md-6">
+					                <label>成立时间</label>
+					                <div class="input-group date">
+					                  <div class="input-group-addon">
+					                    <i class="fa fa-calendar"></i>
+					                  </div>
+					                  <input  name="setupTime"  type="text" class="form-control pull-right" id="datepicker">
+					                </div>
+					            </div>
+	            </div>
+	            
+	            
+	            <div class="col-md-12">
+	            	<div class="form-group col-md-6">
+				                  <label class="requiredMask">传真</label>
+				                  <input type="text"  name="fax"  class="form-control" placeholder="传真号码...">
+				                </div>
+	            	<div class="form-group col-md-6">
+				                  <label class="requiredMask">价格</label>
+				                  <input type="text"  name="price"  class="form-control" placeholder="...">
+				                </div>
+	            </div>
+	            
+	            <div class="col-md-12">
+	            	<div class="form-group col-md-6">
+				                  <label class="requiredMask">企业名称</label>
+				                  <input type="text"  name="agencyName"  class="form-control" placeholder="...">
+				                </div>
+				    <div class="form-group col-md-6">
+				                  <label>地址</label>
+				                  <div style="display:block;">
+				                  <input  name="address"  type="text"  class="form-control"  style="width: 50% ;display: inline;"   name="agencyName"  placeholder="...">
+				                  <label>必填</label>
+				                  <input id="addressRequired"  type="checkbox" class="minimal form-control">
+				                  </div>
+				                </div>
+	            </div>
+	            <div class="col-md-12">
+	            	<div class="form-group col-md-12">
+			                  <label>详情描述</label>
+			                  <textarea name="desc" class="form-control" rows="3" placeholder=" ..."></textarea>
+			        </div>
+	            </div>
+	            
+	            
+	            
+	            <div class="col-md-12">
+	            	<div class="form-group col-md-6">
+						            <label>
+						           	      科技中介机构：
+					                  <input type="checkbox" class="minimal">
+					                </label>
+				                </div>
+				     <div class="form-group col-md-6">
+				                	<label>是否删除</label>
+					                <label>
+					                  <input type="radio" name="deleted" class="flat-blue">
+					                </label>
+				                </div>           
+				                
+	            </div>
+	            
+	            
+	          </div>
+	          <!-- /.row -->
+	        </div>
+      </div>
+    </form>
+    
+    </section>
+	
+	
+	<script type="text/javascript">
+	
+		$(function () {
+			//Date picker
+		    $('#datepicker').datepicker({
+		      autoclose: true
+		    });
+			
+			//data-mask
+		    $("[data-mask]").inputmask();
+			
+			//check-box
+		  	//iCheck for checkbox and radio inputs
+		    $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+		      checkboxClass: 'icheckbox_minimal-blue',
+		      radioClass: 'iradio_minimal-blue'
+		    });
+			
+			//radio
+		  //Flat red color scheme for iCheck
+		    $('input[type="radio"].flat-blue').iCheck({
+		      radioClass: 'iradio_flat-blue'
+		    });
+		});
+		
+		$(function (){
+			 $("#editDemoForm").validate({
+			rules: {
+				'idNumType': {
+					   required: true,
+					   valueNotEquals:'-1'
+				   },
+			   'price': {
+				   required: true,
+				   number:true,
+				   max:999
+			   },
+			   'fax': {
+				   required: true,
+				   number:true
+			   },
+			   'agencyName': {
+				   required: true,
+				   maxlength:8
+			   },
+			   'address': {
+				   required: function (){
+					   return $('#addressRequired').is(':checked');
+				   },
+				   maxlength:256
+			   },
+			   'desc': {
+				   maxlength:10
+			   },
+			   "setupTime":{
+				   required: true,
+				   date:true
+			   }			   
+			  },
+			  submitHandler:function(form){
+				alert("submit form : "+form.id);
+		        } 
+			    });
+		});
+	</script>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

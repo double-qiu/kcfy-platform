@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn" strict="true" name="youapp-log4j2" packages="j.jave.kernal.jave">
+	<Properties>
+		<Property name="rolllogDir">c:/platform/log</Property>
+		<Property name="rolllogRollingFile">tech-market-platform.log</Property>
+	</Properties>
+	
+	<Appenders>
+		<Appender type="Console" name="appConsole">
+			<Layout type="PatternLayout" pattern="%d %p  %c [%t] %m %n" />
+		</Appender>
+
+		<RollingFile name="rollingFile" fileName="${rolllogDir}/${rolllogRollingFile}" append="true" immediateFlush="false"
+			filePattern="${rolllogDir}/$${date:yyyy-MM}/tech-market-platform-%d{MM-dd-yyyy}-%i.log">
+			<PatternLayout pattern="%d{yyyy-MM-dd 'at' HH:mm:ss z} %-5level %class{36} %L %M - %msg%xEx%n" />
+			<SizeBasedTriggeringPolicy size="5 MB" />
+			<DefaultRolloverStrategy max="10000"/>
+		</RollingFile>
+	</Appenders>
+
+	<Loggers>
+		<Logger name="com.kcfy" additivity="false">
+			<AppenderRef ref="appConsole" />
+			<AppenderRef ref="rollingFile" />
+		</Logger>
+
+		<Logger name="org" level="error" additivity="false">
+			<AppenderRef ref="appConsole" />
+			<AppenderRef ref="rollingFile" />
+		</Logger>
+		
+		<Logger name="test.com.kcfy" additivity="false">
+			<AppenderRef ref="appConsole" />
+			<!-- <AppenderRef ref="rollingFile" /> -->
+		</Logger>
+
+		<root level="debug">
+			<AppenderRef ref="appConsole" />
+			<AppenderRef ref="rollingFile" />
+		</root>
+	</Loggers>
+</Configuration>
